@@ -1,0 +1,553 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(225, 225, 225);
+}
+
+.home h1,h2{
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+header a{
+    text-decoration: none;
+
+}
+
+li{
+    list-style: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex_space{
+    display:flex;
+    justify-content: space-between;
+}
+
+
+
+
+.container{
+    max-width: 85%;
+    margin: auto;
+}
+
+section{
+    padding: 25px 9%;
+}
+
+/*--------- header ----------*/
+header{
+    height: 90px;
+    line-height: 90px;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 5px 5px 10px rgba(0, 0,0,0.1);
+    background-color: cadetblue;
+}
+
+header img{
+    
+    width: 120px;
+    height: 80px;
+}
+
+header ul{
+    display: inline-block;
+}
+
+header ul li{
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+header ul li a{
+    color: rgb(255, 255, 255);
+    margin: 0 10px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+header ul li a:hover{
+    color: rgba(17, 57, 69, 0.895);
+}
+header i{
+    margin: 0 20px;
+}
+header button{
+    padding: 13px 40px;
+}
+
+header .navbar span{
+    display: none;
+}
+
+@media only screen and (max-width:768px){
+    header ul{
+        position:absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        height: 900px;
+        background: rgba(160, 205, 207, 0.895) ;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        text-align: center;
+        z-index: 9;
+    }
+
+    header ul li{
+        display: block;
+    }
+
+    header ul li a{
+        color: white;
+    }
+
+    header i{
+        color: white;
+    }
+
+    header .navbar span{
+        color: black;
+        display: block;
+        cursor: pointer;
+        line-height: 90px;
+        font-size: 25px;
+    }
+}
+
+ /*--------- header ----------*/
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 700px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ---HOME--- */
+section {
+    padding: 2rem 9%;
+
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(./assets/homebackground.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content h3{
+    font-size: 5rem;
+    color: #ffffff;
+}
+
+.home .content span{
+    font-size: 3rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-size: 1rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: 15px 40px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.btn:hover{
+    background: cadetblue;
+}
+
+/* ---HOME--- */
+
+/* ---ABOUT--- */
+.heading-normal-txt {
+    color: cadetblue;
+}
+
+.headings {
+    font-weight: bolder;
+}
+
+.headings span{
+    color: cadetblue;
+    
+}
+
+.lead{
+    padding-top: 20px;
+}
+
+.about-content-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+    margin: 3rem 0;
+}
+
+.about-content-wrapper ul{
+    list-style: none;
+}
+
+.about-content-wrapper ul .icons{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.about-content-wrapper ul .icons i{
+    background: cadetblue;
+    padding: 0.8rem;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.about-content-wrapper ul p{
+    margin-left: 1rem;
+}
+
+.agency-right-side .img{
+    position: relative;
+}
+
+.agency-right-side .img img{
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+
+}
+
+.agency-right-side .img::after{
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 55px;
+    bottom: 0;
+    right: 0;
+    background: cadetblue;
+    width: 55%;
+    height:100% ;
+    z-index: -2;
+}
+
+/* ---ABOUT--- */
+
+
+/* ----SEARCH---- */
+.search-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box input {
+    width: 84%;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #000;
+    background-color: #e6f5fb;
+    padding: 12px 16px;
+    border-radius: 14px;
+}
+
+.search-box button {
+    width: 46px;
+    height: 46px;
+    background-color: #e6f5fb;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search-box button:hover {
+    color: #fff;
+    background-color: #ff4500; /* OrangeRed color */
+}
+
+.weather-body {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 20px;
+    display: none;
+}
+
+.weather-body img {
+    width: 60%;
+}
+
+.weather-box {
+    margin-block: 20px;
+    text-align: center;
+}
+
+.weather-box .temperature {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.weather-box .description {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.weather-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-around; /* Spreads items evenly across the width */
+    flex-wrap: wrap; /* Wraps items to the next line if needed */
+    gap: 20px; /* Adds space between items */
+    margin-top: 30px;
+}
+
+.humidity, .wind, .sunrise, .sunset { /* Applies to all weather details */
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Stack icon above text */
+    width: 100px; /* Set a fixed width for each detail */
+    text-align: center;
+}
+.weather-details i {
+    font-size: 30px; /* Adjust icon size */
+    color: #ff4500; /* Optional: matches button hover color for consistency */
+    margin-bottom: 5px;
+}
+
+.weather-details .text {
+   margin-left: 0; /* Reset left margin since items are stacked */
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.text span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.location-not-found {
+    margin-top: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.location-not-found h1 {
+    font-size: 20px;
+    color: #6b6b6b;
+    margin-block-end: 15px;
+}
+
+.location-not-found img {
+    width: 80%;
+}
+
+.location-name, .local-time {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.feels-like, .forecast-temperature {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.button-container {
+    display: flex;               /* Use flexbox */
+    justify-content: center;     /* Center horizontally */
+    margin-top: 20px;           /* Space between the weather details and the button */
+}
+
+.button-container button {
+    padding: 10px 20px;         /* Add some padding for aesthetics */
+    font-size: 16px;            /* Adjust font size */
+    border: none;               /* Remove default border */
+    border-radius: 5px;         /* Add rounded corners */
+    background-color: #ff4500;  /* Button background color */
+    color: white;               /* Button text color */
+    cursor: pointer;            /* Change cursor to pointer */
+}
+
+.button-container button:hover {
+    background-color: #e63946;  /* Change background color on hover */
+}
+
+.head-weather {
+    text-align: center;           /* Center the text */
+    margin: 20px 0;              /* Space above and below the heading */
+}
+
+.head-weather h4 {
+    font-size: 50px;             /* Adjust font size */
+    font-weight: bold;           /* Make the font bold */
+    color: #333;                 /* Change text color */
+    text-transform: uppercase;    /* Make the text uppercase */
+    letter-spacing: 1px;         /* Add space between letters */
+}
+
+.footer {
+    background-color: cadetblue; /* Coral color */
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Container for Gender Buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #e63900;
+}
+
+/* Clothing Recommendations Display */
+#clothingRecommendations {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#clothingRecommendations h4 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#clothingDescription {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#clothingImage {
+    width: 150px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Counter Display */
+#counterDisplay {
+    font-size: 16px;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Next Button */
+#nextRecommendationBtn {
+    display: inline-block;
+    padding: 10px 20px; /* Increased padding for a more prominent look */
+    font-size: 18px; /* Slightly larger font size */
+    margin-top: 15px;
+    background-color: cadetblue; /* Matching the header/footer background */
+    color: white; /* White text for contrast */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+}
+
+#nextRecommendationBtn:hover {
+    background-color: rgb(0, 130, 134); /* Change background on hover to a contrasting blue */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Additional Styles for Button on Focus */
+#nextRecommendationBtn:focus {
+    outline: none; /* Remove outline on focus */
+    box-shadow: 0 0 5px rgba(0, 115, 230, 0.5); /* Add a subtle glow effect */
+}
+
+
+.clothing-recommendations h4{
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+
+

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoyageWise - Traveler Advisories App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/554adc9eea.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+      <div class="content flex_space">
+          <div class="logo">
+              <img src="./assets/logovoyagewise.png" alt="">
+          </div>
+          <div class="navbar">
+              <ul id="menulist">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="itineraries.html">Itineraries</a></li>
+                
+              </ul>
+              <span class="fa fa-bars" onclick="menutoggle()"></span>
+          </div>
+      </div>
+  </header>
+
+  <!-- HOME SECTION -->
+
+<section class="home" id="home">
+  <div class="content">
+    <h3>Voyage Wise</h3>
+    <span>Traveler Advisories</span>
+    <p>Stay informed with real-time travel advisories featuring weather conditions and helpful clothing recommendations. 
+      Get key details such as location, region, country, local time, temperature updates, sunrise and sunset times, wind 
+      speed, humidity, and more.</p>
+    <a href="#forecastWeather" class="btn">Explore Now</a>
+  </div>
+</section>
+
+  <!-- HOME SECTION -->
+
+   <!-- ABOUT -->
+   <section id="about">
+    <div class="container-about">
+      <div class="about-content-wrapper">
+        <div class="agency-left-side">
+          <p class="heading-normal-txt">YOUR TRUSTED TRAVEL ADVISORY</p>
+          <h2 class="headings">
+            DISCOVER THE <span>WORLD</span> WITH VOYAGEWISE
+          </h2>
+          <p class="lead">
+            VoyageWise provides real-time travel advisories and personalized travel itinerary to help you plan your journey effortlessly. Our platform offers insights on weather conditions, suitable attire, and key information about your destination.
+          </p>
+          <p class="lead">
+            Access essential details like local time, temperature updates, wind speed, humidity, sunrise and sunset times, and more, all designed to make your travel experience smooth and enjoyable.
+          </p>
+          <ul>
+            <li>
+                <div class="icons">
+                    <i class="fa fa-check"></i>
+                    <p>Real-time weather conditions and personalized travel itinerary for travel destinations</p>
+                </div>
+            </li>
+            <li>
+                <div class="icons">
+                    <i class="fa fa-check"></i>
+                    <p>Customized clothing suggestions based on forecasted weather</p>
+                </div>
+            </li>
+            <li>
+                <div class="icons">
+                    <i class="fa fa-check"></i>
+                    <p>Essential information like temperature, humidity, and wind speed</p>
+                </div>
+            </li>
+            <li>
+                <div class="icons">
+                    <i class="fa fa-check"></i>
+                    <p>Sunrise and sunset times for planning your daily activities</p>
+                </div>
+            </li>
+            
+        </ul>        
+        </div>
+        <div class="agency-right-side">
+          <div class="img">
+            <img src="./assets/aboutimg.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+  <!-- ABOUT -->
+
+  <script>
+      var menulist=document.getElementById('menulist');
+      menulist.style.maxHeight="0px";
+      
+      function menutoggle(){
+          if( menulist.style.maxHeight=="0px") {
+              menulist.style.maxHeight="900px";
+          }
+          else{
+              menulist.style.maxHeight="0px";
+          }
+          
+      }
+  </script>
+
+<div class="head-weather" id="forecastWeather"> 
+  <div class="head-weather">
+    <h4>FORECAST WEATHER</h4>
+  </div>
+  <div class="container">
+      <div class="search-box">
+          <input type="text" placeholder="Enter your location" class="input-box">
+          <button class="fa-solid fa-magnifying-glass" id="searchBtn"></button>
+      </div>
+
+      <div class="location-not-found" style="display: none;">
+          <h1>Sorry, Location not found!!!</h1>
+          <img src="./assets/404.png" alt="404 Error">
+      </div>
+
+      <div class="weather-body" style="display: none;">
+          <h2 class="location-name">Location: <span id="location"></span></h2>
+          <p class="local-time">Local Time: <span id="localTime"></span></p>
+          <img src="" alt="Weather Icon" class="weather-img" id="weatherIcon">
+          <div class="weather-box">
+              <p class="temperature"> <sup>°C</sup></p>
+              <p class="feels-like">Feels like: <span id="feelsLike"></span></p>
+              <p class="forecast-temperature">Forecast: <span id="forecastTemperature"></span></p>
+              <p class="description" id="weatherDescription"></p>
+          </div>
+          <div class="weather-details">
+              <div class="humidity">
+                  <i class="fa-sharp fa-solid fa-droplet"></i>
+                  <div class="text">
+                      <span id="humidity"></span>
+                      <p>Humidity</p>
+                  </div>
+              </div>
+              <div class="wind">
+                  <i class="fa-solid fa-wind"></i>
+                  <div class="text">
+                      <span id="wind-speed"></span>
+                      <p>Wind Speed</p>
+                  </div>
+              </div>
+              <div class="sunrise">
+                  <i class="fa-solid fa-sun"></i>
+                  <div class="text">
+                      <span id="sunrise"></span>
+                      <p>Sunrise</p>
+                  </div>
+              </div>
+              <div class="sunset">
+                  <i class="fa-solid fa-moon"></i>
+                  <div class="text">
+                      <span id="sunset"></span>
+                      <p>Sunset</p>
+                  </div>
+              </div>
+              <div class="rain-chance">
+                <i class="fa-solid fa-cloud-showers-heavy"></i>
+                <div class="text">
+                    <span id="chanceOfRain"></span>
+                    <p>Chance of Rain</p>
+                </div>
+              </div>
+              <div class="snow-chance">
+                <i class="fa-solid fa-snowflake"></i>
+                <div class="text">
+                    <span id="chanceOfSnow"></span>
+                    <p>Chance of Snow</p>
+                </div>
+              </div>  
+          </div>
+      </div>
+      <div class="button-container">
+        <button id="clothingRecommendationsBtn" style="display: none;">Get Clothing Recommendations</button>
+      </div>
+
+      <!-- Clothing Recommendations Section -->
+      <div class="clothing-recommendations" style="display: none;">
+          <h4>Clothing Recommendations</h4>
+          <div class="recommendation-display">
+              <img src="" alt="Clothing Item" id="clothingImage">
+              <p id="clothingDescription"></p>
+          </div>
+          <button id="nextRecommendationBtn">Next</button>
+      </div>
+  </div>
+</div>
+
+
+  <footer class="footer">
+      <p>&copy; 2024 VoyageWise. All rights reserved.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

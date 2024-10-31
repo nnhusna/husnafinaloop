@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoyageWise - Itineraries</title>
+    <link rel="stylesheet" href="./itineraries.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/554adc9eea.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.4.0/remixicon.css">
+</head>
+<body>
+  <header>
+      <div class="content flex_space">
+          <div class="logo">
+              <img src="./assets/logovoyagewise.png" alt="">
+          </div>
+          <div class="navbar">
+              <ul id="menulist">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="itineraries.html">Itineraries</a></li>
+                  
+              </ul>
+              <span class="fa fa-bars" onclick="menutoggle()"></span>
+          </div>
+      </div>
+  </header>
+
+  <script>
+      var menulist=document.getElementById('menulist');
+      menulist.style.maxHeight="0px";
+      
+      function menutoggle(){
+          if( menulist.style.maxHeight=="0px") {
+              menulist.style.maxHeight="900px";
+          }
+          else{
+              menulist.style.maxHeight="0px";
+          }
+          
+      }
+  </script>
+    <div class="blockitinerary">
+        <h2>Travel Itineraries<i class="ri-calendar-check-fill"></i></h2>
+        
+        <!-- Form for adding a new itinerary -->
+        <div class="itinerary-form">
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" placeholder="Enter destination" required>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+
+            <!-- <label for="details">Itinerary Details:</label>
+            <textarea id="details" placeholder="Enter itinerary details" required></textarea> -->
+            <div class="task-input-container">
+            <label for="taskInput">Itinerary:</label>
+            <input type="text" id="taskInput" placeholder="Enter a itinerary">
+            <button id="addTaskBtn">Add</button>
+            </div>
+
+            <ul id="taskList"></ul>
+
+            <!-- Activity input for weather-related activities -->
+            <div class="activity-input-container">
+                <label for="activityInput">Activity:</label>
+                <input type="text" id="activityInput" placeholder="Enter an activity">
+                <button id="addActivityBtn">Add Activity</button>
+            </div>
+            <ul id="activityList"></ul>
+
+            <button id="addBtn">Add Itinerary</button>
+        </div>
+
+        <!-- Display itineraries -->
+        <div class="itineraries-container">
+            <h3>Your Itineraries</h3>
+            <ul id="itineraryList"></ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 VoyageWise. All rights reserved.</p>
+    </footer>
+
+    <script src="itineraries.js"></script>
+</body>
+</html>
